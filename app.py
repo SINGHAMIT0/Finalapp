@@ -371,9 +371,9 @@ def Revenue_cat(n):
         return('$250M-$500M')
     elif 500000001 <= n <= 1000000000:
         return('$250M-$1B')
-    elif 1000000001 <= n <= 100000000000:
+    elif 1000000001 <= n <= 10000000000:
         return('$1B-$10B')
-    elif n > 100000000001 :
+    elif n > 10000000001 :
         return('$10B+')
 
 
@@ -434,6 +434,7 @@ def upload():
     if request.method == 'POST':
         df = pd.read_csv(request.files.get('file'),encoding='ISO-8859-1',)
         df = pd.DataFrame(df)
+        df = df.drop_duplicates()
         df=df.replace('\ï','i',regex=True)
         df=df.replace('\¿','',regex=True)
         df=df.replace('\â','',regex=True)
