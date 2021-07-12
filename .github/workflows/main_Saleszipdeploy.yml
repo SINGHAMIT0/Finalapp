@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'Saleszipdeploy'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_b31625b834a845559f6f041d5c90d047 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_320d04b3d223433da4251e0669831ab5 }}
